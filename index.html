@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <script src="script.js" defer></script>
+  <link href="main.css" rel="stylesheet">
+</head>
+<body class="bg-gray-200">
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center p-4 bg-gray-800 text-white">
+    <h1 class="text-2xl font-bold">Todo App</h1>
+    <div class="space-x-4">
+      <a href="#" class="text-white hover:text-gray-400">Sign In</a>
+      <a href="#" class="text-white hover:text-gray-400">Sign Up</a>
+    </div>
+  </nav>
+
+  <!-- Todo Board -->
+  <main class="bg-image bg-cover bg-center min-h-screen p-8">
+    <div class="max-w-md mx-auto">
+      <!-- Todo Input -->
+      <div class="flex items-center space-x-4 mb-4">
+        <input type="text" class="todo-input w-full p-2 border border-gray-400 rounded-md" placeholder="Add a new todo...">
+        <input type="date" class="todo-date-input p-2 border border-gray-400 rounded-md">
+        <button class="add-btn py-2 px-4 bg-blue-500 text-white rounded">Add</button>
+      </div>
+
+      <!-- Todo List -->
+      <ul class="todo-list space-y-4">
+        <!-- Todo items will be added here -->
+      </ul>
+
+      <!-- Filter Buttons -->
+      <div class="flex justify-center space-x-4 mt-4">
+        <button class="filter-btn py-2 px-4 bg-gray-500 text-white rounded" data-filter="all">All</button>
+        <button class="filter-btn py-2 px-4 bg-gray-500 text-white rounded" data-filter="active">Active</button>
+        <button class="filter-btn py-2 px-4 bg-gray-500 text-white rounded" data-filter="completed">Completed</button>
+      </div>
+
+      <!-- Clear Completed Button -->
+      <div class="flex justify-center mt-4">
+        <button class="clear-completed-btn py-2 px-4 bg-red-500 text-white rounded">Clear Completed</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
